@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import './css/02-maizuo.css'
+import Film from './maizuocomponent/Film'
+import Cinema from './maizuocomponent/Cinema'
+import Center from './maizuocomponent/Center'
 
 export default class App extends Component {
     state = {
@@ -22,6 +25,15 @@ export default class App extends Component {
     render() {
         return (
             <div>
+                {
+                    this.state.current===0&&<Film></Film>
+                }
+                {
+                    this.state.current===1&&<Cinema></Cinema>
+                }
+                {
+                    this.state.current===2&&<Center></Center>
+                }
                 
 
                 <ul>
