@@ -24,7 +24,8 @@ export default class Cinema extends Component {
       }
     }).then(res=>{console.log(res.data.data.cinemas)
     this.setState({
-      cinemaList:res.data.data.cinemas
+      cinemaList:res.data.data.cinemas,
+      backcinemaList:res.data.data.cinemas
     })
     }).catch(err=>{console.log(err)})
   }
